@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html
+xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+	<head>
+	
+		<!--Import Google Icon Font-->
+     	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    	<!--Import materialize.css-->
+     	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+     	<!--Let browser know website is optimized for mobile-->
+     	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     	
+     	<link rel="stylesheet" href="style/style.css"/>
+	
+		<title> Cadastro | Clientes Orange Talents </title>
+	
+	</head>
+	
+	<body>
+	
+		<header>
+		
+		 <nav>
+		    <div class="nav-wrapper yellow darken-4">
+		      <a href="#" class="brand-logo center">Cadastro de Clientes</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/clientes" class="waves-effect waves-light btn grey darken-1"><i class="material-icons left">format_list_bulleted</i>Listagem de Clientes</a></li>
+		      </ul>
+		    </div>
+		  </nav>
+        
+		
+		</header>
+	
+		
+		
+		<th:block th:include="mensagemValidacao"></th:block>
+		
+		<form class="container" method="post">
+			
+			Nome:<input type="text" value="" name="nome"/>
+			
+			<div class="row">
+				
+				<div class="input-field col s6">
+					E-mail:<input type="email" value="" name="email"/>
+				</div>
+				
+				<div class="input-field col s3">
+					CPF:<input type="text" value="" name="cpf"/>
+				</div>
+				
+				<div class="input-field col s3">
+					Data de nascimento:<input type="date" value="" name="nascimento"/>
+				</div>
+			
+			</div>
+			
+			<button type="submit" class="waves-effect waves-light btn  grey darken-1">Salvar</button>
+		
+		</form>
+		
+		<!--JavaScript at end of body for optimized loading-->
+    	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    	
+	</body>
+
+</html>
+
